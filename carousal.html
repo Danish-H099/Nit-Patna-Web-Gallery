@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+        <nav>
+            <ul>
+                <li><a href='Landing.html'>HOME</a></li>
+                <li><a href='gallery.html'>GALLERY</a></li>
+                <li><a href='highlight.html'>HIGHLIGHTS</a></li>
+                <li><a href='carousal.html'style="color:red;">CAROUSAL</a></li>
+            </ul>
+        </nav>
+
+        <div class="main">
+        <img src="Carousal/6.jpg" class="slide" alt="">
+        <img src="Carousal/6.jpeg" class="slide" alt="">
+        <img src="Carousal/4.jpg" class="slide" alt="">
+        <img src="Carousal/7.jpeg" class="slide" alt="">
+    </div>
+    <div class="nav">
+        <button onclick="goPrev()">Prev</button>
+        <button onclick="goNext()">Next</button>
+    </div>
+    
+</body>
+<script>
+    const slides=document.querySelectorAll(".slide");
+    // console.log(slides)
+    var counter=0;
+    slides.forEach(
+        (slide,index) => {
+            slide.style.left=`${index * 100}%` 
+            // ` is must and no gap before %
+        }
+    );
+    const goNext=()=>{
+        counter++;
+        counter=counter%4
+        slideImage();
+    }
+    const goPrev=()=>{
+        counter--;
+        if(counter==-1){
+            counter=3
+        }
+        slideImage();
+    }
+    const slideImage = () => {
+        slides.forEach(
+            (slide) => {
+                slide.style.transform=`translateX(-${counter*100}%)`
+            }
+        )
+    }
+</script>
+</html>
