@@ -36,7 +36,7 @@ nav ul li a:hover{
 
 @media only screen and (max-width:600px){
     nav ul li{
-        padding:12px;
+        padding:8px;
     }
     nav ul li a{
         font-size: 14px;
@@ -112,9 +112,17 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width:600px){
+    .cards{
+        margin-top:1.3rem;
+    }
     .card{
         min-width: 75%;
     }
+    .card h2{
+        font-size:18px;
+    }
+    .card p{
+        font-size:14px;
 }
 
 /* ---------carousal------------ */
@@ -145,5 +153,9 @@ nav ul li a:hover{
     background-color:rgba(30, 177, 174, 0.5);
     border-radius: 12px;
 }
-
+@media only screen and (max-width:600px){
+    .main{
+        height:400px;
+    }
+}
 
