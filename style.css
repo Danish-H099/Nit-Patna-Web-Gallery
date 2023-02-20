@@ -32,6 +32,9 @@ nav ul li a:hover{
 
 
 @media only screen and (max-width:600px){
+    nav{
+        margin-top:8px
+    }
     nav ul li{
         padding:5px;
     }
@@ -59,6 +62,7 @@ nav ul li a:hover{
         }
         .pic{
             width: 100%;
+            padding:1px;
         }
     }
 
